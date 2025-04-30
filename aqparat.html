@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топ мүшелері</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4A90E2;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .center-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .card-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #4A90E2;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+            color: #4A90E2;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .full-width-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .full-width-card img {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        .full-width-card p {
+            font-size: 16px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="fade-in">
+    <h1>ЖИ Жобасы – Топ мүшелері</h1>
+</header>
+
+<div class="section">
+
+    <div class="center-row">
+        <div class="card fade-in">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Teacher">
+            <h3>Абдулазизов А.А</h3>
+            <p>Топ жетекшісі</p>
+        </div>
+    </div>
+
+    <div class="card-row">
+        <div class="card fade-in">
+            <img src="https://cdn-icons-png.flaticon.com/512/236/236831.png" alt="Student">
+            <h3>Имамакиров Есен</h3>
+            <p>Студент</p>
+        </div>
+        <div class="card fade-in">
+            <img src="https://cdn-icons-png.flaticon.com/512/236/236831.png" alt="Student">
+            <h3>Мирхадиев Миродил</h3>
+            <p>Студент</p>
+        </div>
+        <div class="card fade-in">
+            <img src="https://cdn-icons-png.flaticon.com/512/236/236831.png" alt="Student">
+            <h3>Нуралибеков Муратжан</h3>
+            <p>Студент</p>
+        </div>
+    </div>
+
+    <div class="card-row">
+        <div class="card fade-in">
+            <img src="https://cdn-icons-png.flaticon.com/512/236/236831.png" alt="Student">
+            <h3>Анартаев Асадбек</h3>
+            <p>Студент</p>
+        </div>
+        <div class="card fade-in">
+            <img src="https://cdn-icons-png.flaticon.com/512/236/236832.png" alt="Student">
+            <h3>Алиева Тахмина</h3>
+            <p>Студент</p>
+        </div>
+        <div class="card fade-in">
+            <img src="https://cdn-icons-png.flaticon.com/512/236/236832.png" alt="Student">
+            <h3>Рахимжанова Юлдуз</h3>
+            <p>Студент</p>
+        </div>
+        <div class="card fade-in">
+            <img src="https://cdn-icons-png.flaticon.com/512/236/236831.png" alt="Student">
+            <h3>Имамакиров Аман</h3>
+            <p>Студент</p>
+        </div>
+    </div>
+
+    <div class="full-width-card fade-in">
+        <img src="C:\Users\Esen\Pictures\Изображение WhatsApp 2025-04-30 в 00.33.31_2b116d9e.jpg" alt="Жалпы сурет">
+        <p>Әр қатысушы өз саласында жоғары белсенділік танытып, жоба табысына айтарлықтай үлес қосты.</p>
+    </div>
+</div>
+
+<footer class="fade-in">
+    &copy; 2025 Анвар Исмаилов атындағы кәсіптік колледжі
+</footer>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        fadeElements.forEach((el, index) => {
+            el.style.animationDelay = `${0.2 * index}s`;
+        });
+    });
+</script>
+
+</body>
+</html>
